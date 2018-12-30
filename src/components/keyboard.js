@@ -9,9 +9,9 @@ class Keyboard extends Component{
 
     render() {
         return (
-            <table>
+            <table className='keyboard'>
                 <caption>Keyboard</caption>
-                <tbody className='keyboard'>
+                <tbody>
                     <tr>
                         {this.getTD(0x1)}
                         {this.getTD(0x2)}

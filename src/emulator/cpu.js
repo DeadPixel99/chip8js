@@ -23,7 +23,7 @@ class CPU {
 
     getMemoryData = ()=>{
         return {
-            memoryDump: this.memory,
+            mem: this.memory,
             pc: this.pc,
             V: this.V,
             stack: this.stack,

@@ -56,15 +56,32 @@ table {
   user-select: none;
   border: 1px solid rgba(0,0,0,.5);
   display: inline-block;
-  margin: 15px;
+  margin: 12px;
   width: fit-content;
-
 }
 
-tbody.keyboard {
-  font-size: 1.5rem;
+table.keyboard {
+  width: 20%;
+  height: 35%;
+}
+
+table.keyboard tbody {
+  font-size: 1.1rem;
 }
 
 td.pressed {
   background-color: green;
+}
+
+.v-table table {
+  width: 92%;
+  text-align: center;
+  column-gap: 45px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+
+.stack-table {
+  width: 92%;
 }

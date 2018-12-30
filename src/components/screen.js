@@ -30,9 +30,7 @@ class Screen extends Component{
 
     render() {
         return (
-            <div>
                 <canvas ref='canvas' className='screen' width={this.props.width} height={this.props.height}></canvas>
-            </div>
         );
     }
 }

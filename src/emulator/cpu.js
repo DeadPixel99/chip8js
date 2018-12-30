@@ -21,6 +21,19 @@ class CPU {
         rom && this.setROM(rom);
     }
 
+    getMemoryData = ()=>{
+        return {
+            memoryDump: this.memory,
+            pc: this.pc,
+            V: this.V,
+            stack: this.stack,
+            sp: this.sp,
+            I: this.I,
+            size: this.romSize,
+            keys: this.key
+        }
+    };
+
     getImageData = ()=>{
         return this.GFX;
     };
@@ -45,9 +58,10 @@ class CPU {
     };
 
     setROM = (romFile)=>{
-        for(let i = 0; i < romFile.length; i++) {
+        for(var i = 0; i < romFile.length; i++) {
             this.memory[i + 0x200] = romFile[i];
         }
+        this.romSize = i;
     };
 
     cycle = (opcode)=>{

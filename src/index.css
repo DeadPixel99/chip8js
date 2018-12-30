@@ -14,10 +14,57 @@ code {
 }
 
 canvas {
+  flex-basis: 640px;
+  height: 320px;
   border: 1px solid black;
+  margin: 8px;
 }
 
 .title {
-  font-family: '8BITWONDERNominal';
-  font-size: 2rem;
+  text-align: center;
+}
+
+.opcode-block {
+  flex-basis: 400px;
+  border: 1px solid black;
+  margin: 8px;
+  overflow-y: hidden;
+}
+
+.data-block {
+  display: flex;
+  padding: 4px;
+  height: 400px;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.chip8 {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.c-panel {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  cursor: default;
+  user-select: none;
+  border: 1px solid rgba(0,0,0,.5);
+  display: inline-block;
+  margin: 15px;
+  width: fit-content;
+
+}
+
+tbody.keyboard {
+  font-size: 1.5rem;
+}
+
+td.pressed {
+  background-color: green;
 }

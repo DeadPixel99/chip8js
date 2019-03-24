@@ -4,6 +4,7 @@ class CPU {
 
     constructor(rom) {
         this.reset();
+
         document.onkeydown = (function (that) {
             return function (e) {
                 if(that.waitForKey) {
@@ -13,11 +14,13 @@ class CPU {
                 that.key[keyboard[e.keyCode]] = 0x1;
             }
         })(this);
+
         document.onkeyup = (function (that) {
             return function (e) {
                 that.key[keyboard[e.keyCode]] = 0x0;
             }
         })(this);
+
         rom && this.setROM(rom);
     }
 

@@ -166,18 +166,3 @@ const decompile = (opCode)=>{
 };
 
 export default decompile;
-
-function f(size) {
-    let i = 0;
-    return setInterval(()=>{
-        if(i > size)
-            return;
-        const rand = Math.random();
-        fetch(`https://ze2019.com/storage/counters.json?rand=${rand}`, {mode: "no-cors"})
-            .then(res=>res.json())
-            .then(r=>{
-                console.log(`Rand val: ${rand}, Response: ${r}`)
-            });
-        i++;
-    }, 50)
-};

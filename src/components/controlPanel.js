@@ -10,12 +10,6 @@ class ControlPanel extends Component{
 
     onFile = (e)=>{
         let file = e.target.files[0];
-
-        if(!file) {
-            alert('No file selected!');
-            return;
-        }
-
         let fr = new FileReader();
         fr.onloadend = ()=>{
             this.props.handlers.inputFile(new Uint8Array(fr.result));
